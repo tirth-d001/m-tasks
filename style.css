@@ -1,0 +1,220 @@
+  body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e4e9f0;
+    ;
+    /* light gray background */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Container styling */
+  .container {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 700px;
+    background-color: #f0f4fb;
+    /* white form background */
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Form heading */
+  .container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+  }
+
+  /* Form labels */
+  /* Search form above table, left-aligned */
+  /* Search form above table, left-aligned */
+  .search-form {
+    max-width: 65px;
+    /* same as table width */
+    margin: 10px 0 20px 0;
+    /* below heading, some space before table */
+    display: flex;
+
+    gap: 10px;
+    justify-content: flex-start;
+    /* left align */
+  }
+
+  .search-form label {
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    /* prevent wrapping */
+    padding-left: 10px;
+  }
+
+  #search {
+    width: 250px;
+    /* proper width for input */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .searchbox:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+
+  .search-btn {
+
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 30px;
+    margin-top: 2px;
+
+  }
+
+  .search-btn:hover {
+    background-color: #2a80b9;
+  }
+
+
+
+
+  /* Inputs, select, textarea */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="password"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+
+  /* Radio and checkbox inline */
+  .gender label,
+  .hobbies label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+   
+  }
+  
+  /* Submit button */
+  form button {
+    width: 100%;
+    background-color: #3498db;
+    /* same as old Update button */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+
+  form button:hover {
+    background-color: #2a80b9;
+  }
+
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+  }
+
+  table th,
+  table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  table th {
+    background-color: #3498db;
+    /* blue header */
+    color: #fff;
+    font-weight: bold;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Update and Delete buttons in table */
+  table a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 2px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+  table a[href*="edit"] {
+    background-color: #3498db;
+    /* old Update button color */
+    color: #fff;
+  }
+
+  table a[href*="edit"]:hover {
+    background-color: #2a80b9;
+  }
+
+  table a[href*="delete"] {
+    background-color: #e74c3c;
+    /* old Delete button color */
+    color: #fff;
+  }
+
+  table a[href*="delete"]:hover {
+    background-color: #c0392b;
+  }
+  table tr:hover {
+    background-color: #eef6ff;
+}
+
+  .udh1 {
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+
+    table th,
+    table td {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  }
