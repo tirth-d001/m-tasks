@@ -7,7 +7,7 @@
     $lname =$_POST['lname'];
     $email =$_POST['email'];
     $phone =$_POST['phone'];
-    $password =$_POST['password'];
+    $date =$_POST['date'];
     $gender =$_POST['gender'];
     $hobbies = isset($_POST['hobbies']) ? implode(", ", $_POST['hobbies']) : '';
     $address =$_POST['address'];
@@ -20,7 +20,7 @@
                     lname='$lname',
                     email='$email',
                     phone='$phone',
-                    password='$password',
+                    date='$date',
                     gender='$gender',
                     hobbies='$hobbies',
                     address='$address',
@@ -28,8 +28,8 @@
                 WHERE id=$id";
     } else {
         // Insert new record
-        $sql = "INSERT INTO users (fname,lname,email,phone,password,gender,hobbies,address,country) 
-                VALUES ('$fname','$lname','$email','$phone','$password','$gender','$hobbies','$address','$country')";
+        $sql = "INSERT INTO users (fname,lname,email,phone,date,gender,hobbies,address,country) 
+                VALUES ('$fname','$lname','$email','$phone','$date','$gender','$hobbies','$address','$country')";
     }
 
       if(mysqli_query($connect,$sql))
@@ -99,9 +99,8 @@ if(isset($_GET['edit'])){
             <input type="tel" id="phone" name="phone" maxlength="10" minlength="10" placeholder="Enter phone number"
                 value="<?php echo isset($user['phone']) ? $user['phone'] : ''; ?>" />
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter password"
-                value="<?php echo isset($user['password']) ? $user['password'] : ''; ?>" required />
+            <label for="date">Birth-date</label>
+            <input type="date" id="date" name="date" value="<?php echo isset($user['date']) ? $user['date'] : ''; ?>" required />
 
             <label class="gender-lable">Gender</label>
             <div class="gender">
@@ -180,7 +179,7 @@ $result = mysqli_query($connect, $sql);
         <th>Lname</th>
         <th>Email</th>
         <th>Phone</th>
-        <th>Password</th>
+        <th>Birth-date</th>
         <th>Gender</th>
         <th>Hobbies</th>
         <th>Address</th>
@@ -193,7 +192,7 @@ $result = mysqli_query($connect, $sql);
                   <td>".$row['lname']."</td>
                   <td>".$row['email']."</td>
                   <td>".$row['phone']."</td>
-                  <td>".$row['password']."</td>
+                  <td>".$row['date']."</td>
                   <td>".$row['gender']."</td>
                   <td>".$row['hobbies']."</td>
                   <td>".$row['address']."</td>
